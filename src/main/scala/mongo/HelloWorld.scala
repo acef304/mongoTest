@@ -19,7 +19,9 @@ object HelloWorld extends App {
     
     //val q = "user" $exists true
         
-    val users:List[String] = mongoCol find(MongoDBObject("user" -> ".*Very.*".r)) map(_.toString()) toList
+    //val users:List[String] = mongoCol find(MongoDBObject("user" -> ".*Very.*".r)) map(_.toString()) toList
+    
+    val users:List[String] = mongoCol find() map(_.toString()) toList
     
     users    
   }
